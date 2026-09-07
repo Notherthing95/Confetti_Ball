@@ -13,7 +13,7 @@ public class TimeAnnounce : MonoBehaviour
 
     void Start()
     {
-        script = count.GetComponent<CountdownTimer>();
+        script = this.GetComponent<CountdownTimer>();
     }
 
     void Update()
