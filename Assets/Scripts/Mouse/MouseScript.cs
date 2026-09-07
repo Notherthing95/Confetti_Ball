@@ -65,7 +65,7 @@ public class MouseScript : MonoBehaviour
         {
             circleInfo.isOpened = true;
             _isCircleClicking = false;
-            // ‰ÁZˆ—
+            ScoreManager.Score++;
         }
     }
 
