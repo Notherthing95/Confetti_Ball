@@ -30,7 +30,7 @@ public class MouseScript : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             isClicking = true;
-            if (fingerScript.collisionObject.CompareTag("Circle"))
+            if (fingerScript.collisionObject.gameObject.CompareTag("Circle"))
             {
                 circleInfo = fingerScript.collisionObject.GetComponent<CircleInfo>();
                 fingerPoint.transform.position = circleInfo.kusudamaPoint.transform.position;

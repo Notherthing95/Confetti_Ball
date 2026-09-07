@@ -21,13 +21,14 @@ public class FingerScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isTriggering = true;
-        Debug.Log("triggered");
         collisionObject = collision.gameObject;
+        Debug.Log("triggered: " + collision.gameObject.tag);
 
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         isTriggering = false;
+        collisionObject = null;
     }
 }
