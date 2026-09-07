@@ -1,16 +1,30 @@
+﻿using TMPro;
 using UnityEngine;
 
-public class timeAnnounce : MonoBehaviour
+public class TimeAnnounce : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] TextMeshProUGUI count;
+
+    //フラグ取得用
+    CountdownTimer script;
+
+    //表示用
+    private int _countValue;
+
     void Start()
     {
-        
+        script = count.GetComponent<CountdownTimer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (script.countDown == 60)
+        {
+            //表示用に数値をint変換(切り上げ)
+            _countValue = Mathf.CeilToInt(script.countDown);
+
+            //時間を表示する
+            count.text = "残り" + _countValue.ToString() + "秒";
+        }
     }
 }
