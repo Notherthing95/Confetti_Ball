@@ -215,6 +215,7 @@ MonoBehaviour:
   isOpened: 0
   kusudamaPoint: {fileID: 6513572283563541238}
   kusudama: {fileID: 1245931559225769983}
+  circleImage: {fileID: 8019969302261520025}
 --- !u!222 &6958649054887426997
 CanvasRenderer:
   m_ObjectHideFlags: 0

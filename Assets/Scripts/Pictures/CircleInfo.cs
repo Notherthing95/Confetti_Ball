@@ -5,23 +5,29 @@ using UnityEngine.UI;
 public class CircleInfo : MonoBehaviour
 {
     public bool isOpened;
+    private bool _checkFlag;
     public GameObject kusudamaPoint;
     [SerializeField] GameObject kusudama;
-    Image circleImage;
+    [SerializeField] Image circleImage;
+    [SerializeField] SoundManager sound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        circleImage = GetComponent<Image>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isOpened)
+        if (isOpened && !_checkFlag)
         {
             kusudama.SetActive(true);
             circleImage.sprite = null;
+            circleImage.color = new Color(1f, 1f, 1f, 0f);
+            sound.PlayOpenSE();
+            sound.PlayCorrectSE();
+            _checkFlag = true;
         }
     }
 }

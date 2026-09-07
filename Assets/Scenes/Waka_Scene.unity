@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18236993}
   - component: {fileID: 18236992}
+  - component: {fileID: 18236995}
   - component: {fileID: 18236994}
   m_Layer: 0
   m_Name: EventManager
@@ -265,6 +266,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &18236995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18236991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d552553904e4e40aed27b5a83901b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundManager
+  audioSource: {fileID: 18236994}
+  openSE: {fileID: 8300000, guid: a680546261879604b966b6e0f189bb97, type: 3}
+  correctSE: {fileID: 8300000, guid: ddb63431c139d1c429b59a858bccaa9f, type: 3}
+  incorrectSE: {fileID: 8300000, guid: 34dbf58948f3e5949accd6052502f361, type: 3}
 --- !u!1 &240646417
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +373,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 27.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4158588657582433314, guid: 87e0e0bc2fb31f34186c0af5600ef3f2, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 18236995}
     - target: {fileID: 4252955262204153926, guid: 87e0e0bc2fb31f34186c0af5600ef3f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -573,6 +594,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 4.9
       objectReference: {fileID: 0}
+    - target: {fileID: 4158588657582433314, guid: 87e0e0bc2fb31f34186c0af5600ef3f2, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 18236995}
     - target: {fileID: 4252955262204153926, guid: 87e0e0bc2fb31f34186c0af5600ef3f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -994,6 +1019,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 17.9
       objectReference: {fileID: 0}
+    - target: {fileID: 4158588657582433314, guid: 87e0e0bc2fb31f34186c0af5600ef3f2, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 18236995}
     - target: {fileID: 4252955262204153926, guid: 87e0e0bc2fb31f34186c0af5600ef3f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1132,6 +1161,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1479332578}
     m_Modifications:
+    - target: {fileID: 4158588657582433314, guid: 87e0e0bc2fb31f34186c0af5600ef3f2, type: 3}
+      propertyPath: sound
+      value: 
+      objectReference: {fileID: 18236995}
     - target: {fileID: 4252955262204153926, guid: 87e0e0bc2fb31f34186c0af5600ef3f2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1216,6 +1249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Suica
       objectReference: {fileID: 0}
+    - target: {fileID: 8019969302261520025, guid: 87e0e0bc2fb31f34186c0af5600ef3f2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 497fda4496a24894f8011ab971a7a28c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
