@@ -8,7 +8,11 @@ public class MouseScript : MonoBehaviour
     [SerializeField] GameObject mouseObject;
     [SerializeField] GameObject fingerPoint;
     [SerializeField] FingerScript fingerScript;
-    [SerializeField] bool isClicking;
+
+    //[SerializeField] bool isClicking; // カーソルのアニメーションを変える
+
+    [SerializeField] float breakKusudamaDistance = 5f;
+    private bool _isCircleClicking;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,15 +29,15 @@ public class MouseScript : MonoBehaviour
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
         mouseObject.transform.position = worldPos;
 
-        Debug.Log("mousePos: " + mousePos);
-
         if (Input.GetMouseButtonDown(0))
         {
-            isClicking = true;
-            if (fingerScript.collisionObject.gameObject.CompareTag("Circle"))
+            //isClicking = true;
+
+            if (fingerScript.collisionObject != null && fingerScript.collisionObject.gameObject.CompareTag("Circle"))
             {
                 circleInfo = fingerScript.collisionObject.GetComponent<CircleInfo>();
-                fingerPoint.transform.position = circleInfo.kusudamaPoint.transform.position;
+                mouseObject.transform.position = circleInfo.kusudamaPoint.transform.position;
+                _isCircleClicking = true;
             }
             else
             {
@@ -42,8 +46,10 @@ public class MouseScript : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            isClicking = false;
-            Debug.Log("Upped");
+            //isClicking = false;
+            _isCircleClicking = false;
         }
     }
+
+
 }

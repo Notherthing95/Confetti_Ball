@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 18236993}
   - component: {fileID: 18236992}
+  - component: {fileID: 18236994}
   m_Layer: 0
   m_Name: EventManager
   m_TagString: Untagged
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MouseScript
   mouseObject: {fileID: 573655405}
   fingerPoint: {fileID: 2366732213330454550}
-  fingerScript: {fileID: 0}
+  fingerScript: {fileID: 551669833}
   isClicking: 0
 --- !u!4 &18236993
 Transform:
@@ -167,6 +168,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &18236994
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18236991}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &240646417
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +454,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -41}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &551669833 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2334329957237359835, guid: 0fe2bea546f102c4987c72c1afcdd0bf, type: 3}
+  m_PrefabInstance: {fileID: 2366732213330454549}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c2dd74fc4579824fb67bbf487776710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FingerScript
 --- !u!1 &573655405 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3803113012649602311, guid: 0fe2bea546f102c4987c72c1afcdd0bf, type: 3}
@@ -378,8 +487,8 @@ GameObject:
   - component: {fileID: 1064790526}
   - component: {fileID: 1064790525}
   - component: {fileID: 1064790524}
-  - component: {fileID: 1064790527}
   - component: {fileID: 1064790528}
+  - component: {fileID: 1064790529}
   m_Layer: 5
   m_Name: CirclePoint
   m_TagString: Circle
@@ -460,8 +569,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CircleInfo
   isOpened: 0
   kusudamaPoint: {fileID: 423045129}
---- !u!61 &1064790527
-BoxCollider2D:
+--- !u!50 &1064790528
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064790522}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
+--- !u!58 &1064790529
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -495,44 +631,7 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!50 &1064790528
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064790522}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Radius: 44.89
 --- !u!1 &1312129741
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,7 +720,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3750b3c627357204c8bae4b41e182ac9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::KusudamaInfo
-  kusudamaSprite: []
+  kusudamaSprite:
+  - {fileID: 21300000, guid: 7c7fda3005ca3bd4797e17f58d67c410, type: 3}
+  - {fileID: 21300000, guid: 3140586d207407f4ab5555bcd2c68768, type: 3}
+  - {fileID: 21300000, guid: 7df5dd5d9f6771b41acce88e1c9a2974, type: 3}
+  - {fileID: 21300000, guid: 39b58bba06297e2429e2fa2e18a677b8, type: 3}
+  - {fileID: 21300000, guid: 8c7bfb1dc5021c34ebe59752a28e9cf7, type: 3}
   durationTime: 2
   animationTime: 0.2
 --- !u!1 &1348908663
