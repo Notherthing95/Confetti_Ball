@@ -23,8 +23,8 @@ public class KusudamaInfo : MonoBehaviour
         _timer += Time.deltaTime;
         if(_timer > animationTime && _spriteNumber != kusudamaSprite.Length)
         {
-            _spriteNumber++;
             spriteRenderer.sprite = kusudamaSprite[_spriteNumber];
+            _spriteNumber++;
             _timer = 0;
         }
 
