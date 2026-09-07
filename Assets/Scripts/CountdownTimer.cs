@@ -23,7 +23,8 @@ public class CountdownTimer : MonoBehaviour
     
     void Start() 
     {
-        script = countFirst.GetComponent<FirstCountdown>();
+        //script = countFirst.GetComponent<FirstCountdown>();
+        script = this.GetComponent<FirstCountdown>();
         countDown = 120.0f;
     }
 
