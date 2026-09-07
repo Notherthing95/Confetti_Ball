@@ -1,6 +1,7 @@
 // くす玉が割れるアニメーション
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class KusudamaInfo : MonoBehaviour
@@ -14,6 +15,8 @@ public class KusudamaInfo : MonoBehaviour
     private int _spriteNumber = 0;
     private float _timer = 0;
 
+    [SerializeField] bool isPlayStart;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,7 +29,6 @@ public class KusudamaInfo : MonoBehaviour
         _timer += Time.deltaTime;
         if(_timer > animationTime && _spriteNumber != kusudamaSprites.Length)
         {
-            Debug.Log("Sprite: " + _spriteNumber);
             kusudamaImage.sprite = kusudamaSprites[_spriteNumber];
             _spriteNumber++;
             _timer = 0;
@@ -34,6 +36,8 @@ public class KusudamaInfo : MonoBehaviour
 
         if(_spriteNumber== kusudamaSprites.Length && _timer > durationTime)
         {
+            if (isPlayStart)
+                SceneManager.LoadScene("GameScene");
             parentObject.SetActive(false);
         }
 

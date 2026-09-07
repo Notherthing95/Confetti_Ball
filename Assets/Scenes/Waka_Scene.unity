@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 18236993}
+  - component: {fileID: 18236996}
   - component: {fileID: 18236992}
   - component: {fileID: 18236995}
   - component: {fileID: 18236994}
@@ -282,6 +283,18 @@ MonoBehaviour:
   openSE: {fileID: 8300000, guid: a680546261879604b966b6e0f189bb97, type: 3}
   correctSE: {fileID: 8300000, guid: ddb63431c139d1c429b59a858bccaa9f, type: 3}
   incorrectSE: {fileID: 8300000, guid: 34dbf58948f3e5949accd6052502f361, type: 3}
+--- !u!114 &18236996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18236991}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea62f9bb10bfca94a87706eb5506b705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndGameScript
 --- !u!1 &240646417
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,6 +771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348908666}
+  - component: {fileID: 1348908668}
   - component: {fileID: 1348908665}
   - component: {fileID: 1348908664}
   - component: {fileID: 1348908667}
@@ -839,7 +853,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1479332578}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1348908667
@@ -886,6 +901,22 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1348908668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348908663}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817a40edb606c044fac9c249b0490fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraScript
+  zoomSpeed: 2
+  minZoom: 2
+  maxZoom: 10
+  dragSpeed: 1
 --- !u!1 &1479332574
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,7 +1018,7 @@ RectTransform:
   - {fileID: 387436424}
   - {fileID: 240646418}
   - {fileID: 573655406}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1348908666}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1369,6 +1400,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1348908666}
-  - {fileID: 1479332578}
   - {fileID: 353722535}
   - {fileID: 18236993}

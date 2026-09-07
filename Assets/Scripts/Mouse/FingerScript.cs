@@ -22,7 +22,6 @@ public class FingerScript : MonoBehaviour
     {
         isTriggering = true;
         collisionObject = collision.gameObject;
-        Debug.Log("triggered: " + collision.gameObject.tag);
 
     }
 
