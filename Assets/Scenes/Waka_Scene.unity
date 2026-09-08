@@ -160,6 +160,7 @@ MonoBehaviour:
   countdownTimer: {fileID: 2104371063}
   UICanvas: {fileID: 1709225258}
   incorrectUI: {fileID: 6103911543949097923, guid: 1c8bf28a2256be5469359566a5f6ca7a, type: 3}
+  isStartScene: 0
   breakKusudamaDistance: 0.5
   adjustIncorrectUIPointY: 100
 --- !u!4 &18236993
@@ -291,6 +292,9 @@ MonoBehaviour:
   correctSE: {fileID: 8300000, guid: ddb63431c139d1c429b59a858bccaa9f, type: 3}
   incorrectSE: {fileID: 8300000, guid: 34dbf58948f3e5949accd6052502f361, type: 3}
   endGameSE: {fileID: 8300000, guid: 00b9a5cf01b810343b1053e4a8f032f6, type: 3}
+  startSE: {fileID: 8300000, guid: dfb235d1118f2ca4e8970666b8a1313b, type: 3}
+  countSE: {fileID: 8300000, guid: 4ca9a359a2f31444a900162c03f7374e, type: 3}
+  intervalSE: {fileID: 8300000, guid: b16b4c78cafc1374480b0f940889a253, type: 3}
 --- !u!114 &18236998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,8 +322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8563f861774f864f8ab8b4ee034a387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountdownTimer
-  count: {fileID: 2104371064}
-  countFirst: {fileID: 418782251}
   countDown: 120
 --- !u!114 &18237000
 MonoBehaviour:
@@ -1052,6 +1054,9 @@ MonoBehaviour:
   - {fileID: 2094719078}
   - {fileID: 70360965}
   correctCircles: []
+  isResultScene: 0
+  scoreTimeText: {fileID: 0}
+  resultManager: {fileID: 0}
 --- !u!1 &1348908663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,8 +1777,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8563f861774f864f8ab8b4ee034a387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CountdownTimer
-  count: {fileID: 2104371064}
-  countFirst: {fileID: 418782251}
   countDown: 120
 --- !u!114 &2104371064
 MonoBehaviour:
@@ -1934,7 +1937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 31483561f1a92af4792b88fb5f5c668f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32504f6fe9957d04b8e6b46e95e61e14, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
