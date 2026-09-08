@@ -3,7 +3,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource audioSource;
-    public AudioClip openSE, correctSE, incorrectSE, endGameSE;
+    public AudioClip openSE, correctSE, incorrectSE, endGameSE, startSE, countSE, intervalSE;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,6 +37,23 @@ public class SoundManager : MonoBehaviour
     {
         audioSource.PlayOneShot(endGameSE);
     }
+
+    public void PlayStartSE()
+    {
+        audioSource.PlayOneShot(startSE);
+    }
+
+    public void PlayCountSE()
+    {
+        audioSource.PlayOneShot(countSE);
+    }
+
+    public void PlayIntervalSE()
+    {
+        audioSource.PlayOneShot(intervalSE);
+    }
+
+    
 
     // ã‹L‚Ì‘‚«•û‚ğQl‚É’Ç‰Á‚µ‚½‚¢‰¹‚ª‚ ‚ê‚Î’Ç‰Á
 }

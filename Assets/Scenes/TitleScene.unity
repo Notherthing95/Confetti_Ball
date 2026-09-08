@@ -301,6 +301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mouse
       objectReference: {fileID: 0}
+    - target: {fileID: 3803113012649602311, guid: 0fe2bea546f102c4987c72c1afcdd0bf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9046719590160839085, guid: 0fe2bea546f102c4987c72c1afcdd0bf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
