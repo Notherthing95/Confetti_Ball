@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class KusudamaInfo : MonoBehaviour
 {
-    // ‚±‚±‚ÉƒXƒCƒJ‚Éó‘Ô‚ð‘—‚éˆ—‚ð“ü‚ê‚é
     Image kusudamaImage;
     [SerializeField] GameObject parentObject;
     [SerializeField] Sprite[] kusudamaSprites;
@@ -14,8 +13,7 @@ public class KusudamaInfo : MonoBehaviour
     [SerializeField] float animationTime = 0.1f;
     private int _spriteNumber = 0;
     private float _timer = 0;
-
-    [SerializeField] bool isPlayStart;
+    [SerializeField] bool isStartScene;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -36,9 +34,10 @@ public class KusudamaInfo : MonoBehaviour
 
         if(_spriteNumber== kusudamaSprites.Length && _timer > durationTime)
         {
-            if (isPlayStart)
+            if (isStartScene)
                 SceneManager.LoadScene("GameScene");
-            parentObject.SetActive(false);
+            else
+                parentObject.SetActive(false);
         }
 
 
