@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 154ce35f4a7a2324891a61a2862cc2a0
+guid: 1c566a17a1347904f97b7c2b4d88ccbb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2382131192002611809
-    second: Result 1_0
+      213: 2916792009633341394
+    second: manomaru_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Result 1_0
+      name: manomaru_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 49
+        y: 48
+        width: 415
+        height: 415
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f957e4c4d48f0fed0800000000000000
-      internalID: -2382131192002611809
+      spriteID: 2df94e101e68a7820800000000000000
+      internalID: 2916792009633341394
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Result 1_0: -2382131192002611809
+      manomaru_0: 2916792009633341394
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

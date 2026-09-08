@@ -16,7 +16,7 @@ public class MouseScript : MonoBehaviour
     [SerializeField] GameObject UICanvas;
     [SerializeField] GameObject incorrectUI;
 
-    [SerializeField] bool isStartScene;
+    [SerializeField] bool isGameScene;
 
 
     //[SerializeField] bool isClicking; // カーソルのアニメーションを変える
@@ -54,7 +54,7 @@ public class MouseScript : MonoBehaviour
 
                 _isCircleClicking = true;
             }
-            else if(!isStartScene)
+            else if(isGameScene)
             { 
                 soundManager.PlayIncorrectSE();
                 countdownTimer.countDown -= 5.0f;
@@ -76,7 +76,7 @@ public class MouseScript : MonoBehaviour
         {
             circleInfo.isOpened = true;
             _isCircleClicking = false;
-            if (!isStartScene)
+            if (isGameScene)
                 ScoreManager.Score++;
             
         }
