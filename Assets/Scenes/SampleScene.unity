@@ -283,7 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0354310e09c8342ac60ebea29a3255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeAnnounce
-  count: {fileID: 255122876}
+  announce: {fileID: 1335575130}
+  speed: 0
 --- !u!4 &233405517
 Transform:
   m_ObjectHideFlags: 0

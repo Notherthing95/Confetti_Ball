@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class CountdownTimer : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI count;
-    [SerializeField] TextMeshProUGUI countFirst;
+    //[SerializeField] TextMeshProUGUI count;
+    //[SerializeField] TextMeshProUGUI countFirst;
 
     //フラグ取得用
     FirstCountdown script;
 
     //カウントダウン
-    public float countDown = 120.0f;
+    public float countDown;
     //表示用
     private int _countValue;
 
@@ -25,7 +25,7 @@ public class CountdownTimer : MonoBehaviour
     {
         //script = countFirst.GetComponent<FirstCountdown>();
         script = this.GetComponent<FirstCountdown>();
-        countDown = 120.0f;
+        //countDown;
     }
 
     void Update()
@@ -39,12 +39,12 @@ public class CountdownTimer : MonoBehaviour
             _countValue = Mathf.CeilToInt(countDown);
 
             //時間を表示する
-            count.text = _countValue.ToString() + "秒";
+            //count.text = _countValue.ToString() + "秒";
 
             //countdownが0以下になったとき
             if (countDown <= 0)
             {
-                count.text = "TIME UP!!";
+                //count.text = "TIME UP!!";
             }
         }
     }
