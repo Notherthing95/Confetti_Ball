@@ -27,7 +27,7 @@ public class FirstCountdown : MonoBehaviour
         if (countDownFirst >= 0.0f)
         {
             //カウントダウン
-            countDownFirst -= Time.deltaTime;
+            countDownFirst -= Time.unscaledDeltaTime;
 
             //表示用に数値をint変換(切り上げ)
             _countFirstValue = Mathf.CeilToInt(countDownFirst) - 1;
