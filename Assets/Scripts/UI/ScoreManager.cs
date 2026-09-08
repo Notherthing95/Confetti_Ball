@@ -10,6 +10,9 @@ public class ScoreManager : MonoBehaviour
     static public float ScoreTime = 0;
     static public float HiScoreTime = 0;
 
+    public GameObject[] Circles;
+    public GameObject[] correctCircles;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +23,6 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = Score.ToString();
+        scoreText.text = Score.ToString() + "/" + Circles.Length.ToString();
     }
 }

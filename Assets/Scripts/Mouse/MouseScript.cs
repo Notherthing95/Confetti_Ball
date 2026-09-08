@@ -11,12 +11,20 @@ public class MouseScript : MonoBehaviour
     [SerializeField] GameObject mouseObject;
     [SerializeField] GameObject fingerPoint;
     [SerializeField] FingerScript fingerScript;
+    [SerializeField] SoundManager soundManager;
+    [SerializeField] CountdownTimer countdownTimer;
+    [SerializeField] GameObject UICanvas;
+    [SerializeField] GameObject incorrectUI;
+
+    [SerializeField] bool isStartScene;
+
 
     //[SerializeField] bool isClicking; // カーソルのアニメーションを変える
 
     [SerializeField] float breakKusudamaDistance = 0.5f;
+    [SerializeField] float adjustIncorrectUIPointY = 100.0f;
     private bool _isCircleClicking;
-
+    private GameObject _incorrectUIObject;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,9 +54,12 @@ public class MouseScript : MonoBehaviour
 
                 _isCircleClicking = true;
             }
-            else
-            {
-                // 制限時間を減らす、その他
+            else if(!isStartScene)
+            { 
+                soundManager.PlayIncorrectSE();
+                countdownTimer.countDown -= 5.0f;
+                _incorrectUIObject = Instantiate(incorrectUI,Input.mousePosition + new Vector3(0f,adjustIncorrectUIPointY,0f),Quaternion.identity);
+                _incorrectUIObject.gameObject.transform.SetParent(UICanvas.gameObject.transform);
             }
         }
         if (Input.GetMouseButtonUp(0))
@@ -57,15 +68,17 @@ public class MouseScript : MonoBehaviour
             circleInfo = null;
         }
 
-        if (_isCircleClicking)
-            Debug.Log("distance: " + (distanceY - mouseObject.transform.position.y));
+        //if (_isCircleClicking)
+        //    Debug.Log("distance: " + (distanceY - mouseObject.transform.position.y));
 
         // くす玉を割る処理
         if(_isCircleClicking && distanceY - mouseObject.transform.position.y > breakKusudamaDistance)
         {
             circleInfo.isOpened = true;
             _isCircleClicking = false;
-            ScoreManager.Score++;
+            if (!isStartScene)
+                ScoreManager.Score++;
+            
         }
     }
 

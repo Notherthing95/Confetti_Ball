@@ -11,6 +11,7 @@ public class CircleInfo : MonoBehaviour
     [SerializeField] Image circleImage;
     [SerializeField] SoundManager sound;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
