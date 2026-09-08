@@ -10,17 +10,25 @@ public class CountdownTimer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI count;
     [SerializeField] TextMeshProUGUI countFirst;
+    [SerializeField] SoundManager soundManager;
 
     //フラグ取得用
     FirstCountdown script;
 
     //カウントダウン
     public float countDown;
+    //初期化用
+    private float _countDownCpy;
+    //初期化処理用フラグ
+    private int _countDownCpyFlag = 0;
     //表示用
     private int _countValue;
 
     //画面遷移用ラグ
     private float _rag = 0;
+
+    //終了効果音用フラグ
+    private int _end = 0;
 
     //カウントダウン開始用フラグ
     //private int _countDownFlag = 0;
@@ -33,9 +41,14 @@ public class CountdownTimer : MonoBehaviour
     void Start() 
     {
         //script = countFirst.GetComponent<FirstCountdown>();
-        
-        script = this.GetComponent<FirstCountdown>();
         //countDown;
+        if (_countDownCpyFlag == 0)
+        {
+            _countDownCpy = countDown;
+        }
+        countDown = _countDownCpy;
+        soundManager = this.GetComponent<SoundManager>();
+        script = this.GetComponent<FirstCountdown>();
     }
 
     void Update()
@@ -62,9 +75,14 @@ public class CountdownTimer : MonoBehaviour
             if (countDown <= 0)
             {
                 count.text = "TIME UP!!";
-
+                
                 Time.timeScale = 0;
 
+                if (_end == 0)
+                {
+                    soundManager.PlayendGameSE();
+                    _end++;
+                }
                 //time Time.unscaledDeltaTime;
             }
 
