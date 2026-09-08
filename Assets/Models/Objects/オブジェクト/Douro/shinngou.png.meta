@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 154ce35f4a7a2324891a61a2862cc2a0
+guid: 64ac0196e39f0704abca41050ad02f20
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2382131192002611809
-    second: Result 1_0
+      213: -7449857949894348803
+    second: shinngou_0
+  - first:
+      213: -7110657085252573422
+    second: shinngou_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Result 1_0
+      name: shinngou_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 94
+        y: 74
+        width: 291
+        height: 433
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f957e4c4d48f0fed0800000000000000
-      internalID: -2382131192002611809
+      spriteID: dff6d656aa9cc9890800000000000000
+      internalID: -7449857949894348803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shinngou_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217e7e90e0fd15d90800000000000000
+      internalID: -7110657085252573422
       vertices: []
       indices: 
       edges: []
@@ -148,7 +173,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Result 1_0: -2382131192002611809
+      shinngou_0: -7449857949894348803
+      shinngou_1: -7110657085252573422
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

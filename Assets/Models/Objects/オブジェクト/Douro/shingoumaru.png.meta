@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 154ce35f4a7a2324891a61a2862cc2a0
+guid: a0a921639559b8f44a6f46b5f72744e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2382131192002611809
-    second: Result 1_0
+      213: 232655916713869038
+    second: shingoumaru_0
+  - first:
+      213: 5247472616132314059
+    second: shingoumaru_1
+  - first:
+      213: -1689555780284828993
+    second: shingoumaru_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Result 1_0
+      name: shingoumaru_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 199
+        y: 434
+        width: 52
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f957e4c4d48f0fed0800000000000000
-      internalID: -2382131192002611809
+      spriteID: eee7f96d25f8a3300800000000000000
+      internalID: 232655916713869038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shingoumaru_1
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 435
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc30825ca84c2d840800000000000000
+      internalID: 5247472616132314059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shingoumaru_2
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 434
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb23aef28fd7d88e0800000000000000
+      internalID: -1689555780284828993
       vertices: []
       indices: 
       edges: []
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Result 1_0: -2382131192002611809
+      shingoumaru_0: 232655916713869038
+      shingoumaru_1: 5247472616132314059
+      shingoumaru_2: -1689555780284828993
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
