@@ -1,5 +1,7 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class ScoreManager : MonoBehaviour
     public GameObject[] Circles;
     public GameObject[] correctCircles;
 
+    public bool isGameScene;
     /// <summary>
     /// ‚±‚±‚©‚ç‰º‚ÍResultScene‚Å‚Ì‚Ý“ü‚ê‚é‚±‚Æ
     /// </summary>
@@ -35,6 +38,11 @@ public class ScoreManager : MonoBehaviour
         {
             resultManager.isAllCorrect = true;
             scoreTimeText.text = Score.ToString();
+        }
+
+        if (Keyboard.current.pKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene("ResultScene");
         }
     }
 }
